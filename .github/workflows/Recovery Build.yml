@@ -103,8 +103,8 @@ jobs:
         mkdir workspace
         cd workspace
         echo "::set-output name=pwd::$(pwd)"
-        git config --global user.name "depesh1977"
-        git config --global user.email "axenov.gosha@yandex.ru"
+        git config --global user.name "kartwr"
+        git config --global user.email "no@no.no"
         repo init --depth=1 -u ${{ github.event.inputs.MANIFEST_URL }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
       id: pwd
           
@@ -156,4 +156,4 @@ jobs:
           Device: ${{ github.event.inputs.DEVICE_NAME }}
           Target: ${{ github.event.inputs.BUILD_TARGET }}.img
       env:
-        GITHUB_TOKEN: ${{ secrets.tes }}
+        GITHUB_TOKEN: ${{ secrets.TEST }}
